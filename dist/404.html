@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <script>
+      (function() {
+        var pathname = window.location.pathname;
+        var search = window.location.search;
+        var hash = window.location.hash;
+        var newUrl = window.location.protocol + "//" + window.location.host + "/rsg/index.html" + search + hash;
+        if (pathname.startsWith("/rsg/")) {
+          window.location.replace(newUrl);
+        } else {
+          window.location.replace("/rsg/index.html" + search + hash);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html>
